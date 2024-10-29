@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">  
+    <head>
+        
+        <!--jeux de charactère latin-->
+        <meta charset="utf-8">
+        
+        <!--titre du site, important pour google-->
+        <title>Espace pour la Vie</title>
+        
+        <!--description pour google-->
+        <meta name="description" content="Espace pour la vie, votre espace pour vivre idk je suis un gaphiste c'est pas ma job d'écrire ça">
+        <meta name="robots" content="index, follow">
+        
+        <!--pour que le site soit ok dans les mobiles aussi-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+        <!--compatibilité avec edge-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <!--Nom de l'auteur-->
+        <meta name="author" content="Edgar Proulx - Qweee"/>
+        
+        <!--L'url de ce site et l'indication à google de l'indexer-->
+        <link rel="canonical" href="http://espacepourlavie.com/" />
+        
+        <!--Liens vers ma feuille de stylet-->
+        <link rel="stylesheet" href="style.css">
+
+        <!--mots clé pour google-->
+	    <meta name="keywords" content="Montréal, plante, jardin botanique, jardin, espace pour la vie">
+
+        <!--Liens vers la google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        <link href="https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-regular.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
+        <!--Liens vers la librairie d'icone sociaux-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <body>
+        <header id="header">
+        </header>
+        <nav>
+            <a class="b" href="index.html">Biodôme</a>
+            <a class="i" href="insectarium.html">Insectarium</a>
+            <a class="p" href="planetarium.html">Planétarium</a>
+            <a class="j" href="botanique.html">Jardin Botanique </a>
+        </nav>
+        <div class="titre">
+        <h1>JARDIN</h1>
+        <h1>BOTANIQUE</h1>
+        <h1>DE</h1>
+        <h1>MONTRÉAL</h1>
+        <img id="jardin" src="images/jardin_botanique.jpeg">
+        <img>
+        <div class="boutton1div">
+        <a class="boutton1" href="#">MON PASSEPORT</a></div>
+        <div class="boutton2div">
+        <a class="boutton2" href="#">BILLETERIE</a></div>
+        </div>  
+        <img class="logo3" src="images/Jardin_botanique_Montreal.png">
+        <img id="plante1" src="images/plant1.png">
+        <img id="plante2" src="images/plant2.png">
+        <img id="plante3" src="images/plant3.png">
+        <img id="arrosoir" src="images/arrosoir.png">
+        <div class="scroll1">
+        <p class="texte">Renouez avec les joies de l’enfance en vous amusant à retrouver sous le feuillage des plantes tropicales des chenilles étonnantes de diversité. Qu’elles soient vertes, jaunes ou bleues, en costume rayé ou ocellé, couvertes de cire, de poils ou d’épines, les chenilles rivalisent d’astuces pour se protéger des prédateurs… et vous surprendre!</p>
+        </div>
+        <div class="bottom_scroll1"><img class="logo" src="images/logo_espace.png"></div>
+
+        <footer class="pied"><div class="pied1">
+        <p>Espace pour la vie regroupe le Biodôme, la Biosphère, l’Insectarium, le Jardin botanique et le Planétarium Rio Tinto Alcan.</p>
+        <hr>
+        <p>Ces cinq institutions prestigieuses de la Ville de Montréal forment le plus important complexe en sciences de la nature au Canada.</p>
+    </div>
+        <div class="sociaux">
+        <!--liens -->
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+        <a href="#" class="fa fa-snapchat-ghost"></a>
+        <a href="#" class="fa fa-flickr"></a>
+        </div>
+    </div>
+    <div class="pied3">
+    <p>© Tous droits réservés, Ville de Montréal + Edgar Proulx/Qweee
+        </p></footer>
+
+        </div>
+        <script>
+var arrosoir=document.getElementById("arrosoir");
+var plante2=document.getElementById("plante2");
+var plante3=document.getElementById("plante3");
+var growth=55;
+var xpos=0;
+var ypos=0;
+var vw
+plante3.style.left="38vw";
+var stem = document.createElement("img");  
+            stem.src="images/plant2.png";
+            stem.style.position="absolute";
+            stem.style.bottom=(growth%140)-60+"vh";
+            stem.style.left=plante3.style.left;
+            stem.style.zIndex=-2;
+            stem.style.width="25vw";
+            document.body.appendChild(stem);  
+
+
+document.onmousemove = function(e){
+    xpos=e.clientX;
+    ypos=e.clientY;
+    vw=document.documentElement.clientWidth;
+}
+
+function loop() {
+    arrosoir.style.left=(xpos-100)+"px";
+    arrosoir.style.top=(ypos-100)+"px";
+    if (xpos>0.3*vw && xpos<0.5*vw){
+        arrosoir.style.transform = "rotate(1rad)";
+        growth+=0.5;
+        plante3.style.bottom=(growth%140)-65+"vh";
+        if (growth%140==0) {
+            plante3.style.left=(((growth+65)%280)-140)*growth/2500+40+"vw";
+        }
+        if (growth%5==0){
+            var stem = document.createElement("img");  
+            stem.src="images/plant2.png";
+            stem.style.position="absolute";
+            stem.style.bottom=(growth%140)-60+"vh";
+            stem.style.left=plante3.style.left;
+            stem.style.zIndex=-2;
+            stem.style.width="25vw";
+            document.body.appendChild(stem);  
+        }
+    }
+    else{
+        arrosoir.style.transform = "rotate(0rad)";
+    }
+}
+
+setInterval(loop, 50);
+        </script>
+    </body>
+</html>

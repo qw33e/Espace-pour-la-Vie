@@ -1,0 +1,321 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  html,
+  body {
+    font-family: 'Fira Code', monospace;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    overflow-x: hidden
+  }
+
+#soleil {
+    position:absolute;
+    width:50vw;
+    height:auto;
+    bottom:-35vw;
+    left:25vw;
+    transform: rotate(0rad);
+    transition: all 100ms linear;
+    z-index: -1;
+}
+#étoiles {
+  position:absolute;
+  width:100vw;
+  height:auto;
+  bottom:-50vw;
+  transform: rotate(0rad);
+  transition: all 100ms linear;
+  z-index: -2;
+}
+
+#jardin{
+  position:absolute;
+  top:-20vh;
+  left:0;
+  width:100vw;
+  height:auto;
+  z-index:-2;
+}
+
+nav {
+    display:grid;
+    gap:5px;
+    position:absolute;
+    width:50vw;
+    left:25vw;
+    top:2vh;
+}
+
+nav a {
+    transition:all 100ms linear;
+    font-family: 'Anton', sans-serif;
+    font-size:23px;
+    margin-left:3vw;
+    color: rgb(195, 195, 195);
+    text-decoration: none;
+}
+.b {
+  grid-column-start:1;
+  grid-column-end:2;
+}
+.b:hover {
+    text-decoration: none;
+    color: rgb(72, 147, 147);
+}
+.i {
+  grid-column-start:2;
+  grid-column-end:3;
+}
+.i:hover {
+  text-decoration: none;
+  color: rgb(190, 113, 61);
+}
+.p {
+  grid-column-start:3;
+  grid-column-end:4;
+}
+.p:hover {
+  text-decoration: none;
+  color: rgb(97, 68, 174);
+}
+.j {
+  grid-column-start:4;
+  grid-column-end:5;
+}
+.j:hover {
+  text-decoration: none;
+  color: rgb(91, 156, 87);
+}
+
+.logo {
+    height:17vh;
+    width:auto;
+    position:absolute;
+    left:4vw;
+    top:26vh;
+}
+.logo2{
+  position:absolute;
+  top:87vh;
+  left:0.2vw;
+  height:15vh;
+  width:auto;
+}
+.logo3{
+  position:absolute;
+  top:7vh;
+  left:1vw;
+  height:10vh;
+  width:auto;
+}
+
+#plante1{
+  z-index:-1;
+  position:absolute;
+  top:45vh;
+  left:38vw;
+  width:25vw;
+}
+#plante2{
+  z-index:-1;
+  position:absolute;
+  top:45vh;
+  left:38vw;
+  width:25vw;
+}
+#plante3{
+  z-index:-1;
+  position:absolute;
+  bottom:-10vh;
+  left:38vw;
+  width:25vw;
+}
+#arrosoir{
+  z-index:-1;
+  position:absolute;
+  top:75vh;
+  left:20vw;
+  width:25vw;
+  transition:all 50ms linear;
+  transform: rotate(0rad);
+}
+
+#penguin2{
+  z-index:-1;
+  position:absolute;
+  bottom:20vh;
+  left:4vw;
+  width:20vw;
+  transition:all 50ms linear;
+  transform: rotate(0rad);
+}
+#penguin1{
+  z-index:-1;
+  position:absolute;
+  bottom:20vh;
+  left:64vw;
+  width:20vw;
+  transition:all 50ms linear;
+  transform: rotate(0rad);
+}
+.life1{
+  background-color:yellow;
+  height:1vh;
+  width:50vw;
+  position:absolute;
+  bottom:0vh;
+  left:0vh;
+}
+.life2{
+  background-color:yellow;
+  height:1vh;
+  width:50vw;
+  position:absolute;
+  bottom:0vh;
+  right:0vh;
+}
+
+body {
+background-color: rgb(7, 0, 34);
+}
+
+a:hover, a:visited, a:link, a:focus, a:active
+{
+      text-decoration: none!important;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+    font-size: 5em;
+    color:white;
+}
+.titre{
+  position:absolute;
+  top:20vh;
+  left:-0.5vw;
+}
+
+.boutton1div{
+  position:relative;
+  background-color: rgb(195, 121, 87);
+  left:-5vw;
+  width:25vw;
+  height:9vh;
+  top:2vh;
+  border-radius:30px;
+  border: 10px solid rgb(140, 84, 58);
+}
+.boutton1{
+  position:relative;
+  font-family: 'Anton', sans-serif;
+  font-size:2.2em;
+  color:rgb(224, 223, 223);
+  left:7vw;
+  top:-0.5vh;
+}
+
+.boutton2div{
+  position:relative;
+  background-color: rgb(124, 169, 120);
+  left:-5vw;
+  width:25vw;
+  height:9vh;
+  top:4vh;
+  border-radius:30px;
+  border: 10px solid rgb(81, 110, 78);
+}
+.boutton2{
+  position:relative;
+  font-family: 'Anton', sans-serif;
+  font-size:2.2em;
+  color:rgb(224, 223, 223);
+  left:7vw;
+  top:-0.5vh;
+}
+
+.scroll1{
+  position:absolute;
+  top:100vh;
+  width:100vw;
+  height:55vh;
+  background-image: linear-gradient(rgb(47, 47, 87), rgb(25, 25, 46));
+}
+.bottom_scroll1{
+  position:absolute;
+  top:155vh;
+  width:100vw;
+  height:30vh;
+  background-color:rgb(41, 6, 46)
+}
+.texte{
+  color:rgb(212, 212, 212);
+  position:absolute;
+  font-size:2em;
+  top:10vh;
+  left:5vw;
+  width:70vw;
+  transition:all 100ms linear;
+  font-family: 'Radio Canada', sans-serif;
+  padding:10px;
+  border-radius:15px;
+  background-color:rgb(29, 29, 55);
+}
+.texte:hover{
+  color:rgb(255, 255, 255);
+  top:8vh;
+}
+
+.pied {
+  font-family: 'Radio Canada', sans-serif;
+    position:absolute;
+    top:155vh;
+    left:0vw;
+    transition:all 1000ms linear;
+    background-size:100%;
+    grid-template-columns: 5fr 2fr 3fr;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.6em;
+    height:23vh;
+}
+.pied1{ 
+margin-top:30px;
+grid-column-start: 1;
+  grid-column-end: 2;
+  color:rgb(181, 181, 181);
+}
+.pied3{
+      margin-left:10vw;
+color: rgb(255, 251, 0);
+    font-weight: 100;
+    font-size: 0.5em;
+}
+.sociaux a{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+.sociaux {
+    margin-top: 10vh;
+    margin-left:10vw;
+}
+.fa {
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer{
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 10;
+    min-height: 200px;
+}
